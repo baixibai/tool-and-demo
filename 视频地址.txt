@@ -1,0 +1,10 @@
+百家乐视屏地址：
+ws://websocketh5play.chinawaf-cdn.com:10004
+ws://websocketh5play.chinawaf-cdn.com:20004
+ws://websocketh5play.chinawaf-cdn.com:30004
+ws://websocketh5play.chinawaf-cdn.com:50004
+ws://websocketh5play.chinawaf-cdn.com:60004
+
+龙虎：
+ws://websocketh5play.chinawaf-cdn.com:40004
+

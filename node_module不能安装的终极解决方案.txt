@@ -1,0 +1,58 @@
+前提：
+1.设置了环境变量   NODE_PATH         C:\Program Files\nodejs 
+
+2.假如设置了代理和一些乱起八糟的东西，或者不记得了就通通执行下这几条
+npm cache clean   清楚node缓存
+npm config delete proxy   删除代理
+npm config set strict-ssl false   设置改变
+npm config set registry "http://registry.npmjs.org/"  
+npm install -g cnpm --registry=http://r.cnpmjs.org
+此时应该会安装成功
+
+如果成功，执行 npm install
+
+没成功就再试下1和2
+
+如果还是没成功就是网络问题，想办法搞个代理翻墙把
+也可以换下http://registry.npmjs.org/这个，换成淘宝的源，不过这个没试
+
+
+
+
+安装成功跑项目报错
+
+npm install webpack -g   全局安装下这个再运行
+
+
+
+
+vue创建步骤，安装好之后执行
+npm init
+
+
+
+
+
+代理配置
+devServer: {
+    historyApiFallback  : true,
+    inline: true,
+    noInfo: true,
+	proxy: {
+	  '/wap': {
+		target: 'http://tumei.test.19n.net/',
+		changeOrigin: true,
+		pathRewrite: {
+		  '^/wap': '/wap'
+		}
+	  }
+	}
+  },
+
+
+http://bug.test.19n.net/
+
+https://segmentfault.com/a/1190000005602881
+
+
+

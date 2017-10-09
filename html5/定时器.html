@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+     function notwo(i){
+		 if(i<10){
+			 return "0"+i;
+			 }
+		 else{
+			 return ""+i;
+			 }	 
+		 }
+     function times(){
+	 var date=new Date();
+	 var time=document.getElementById('time');
+	 time.innerHTML=notwo(date.getHours())+":"+notwo(date.getMinutes())+":"+notwo(date.getSeconds());
+	 }
+	 window.onload=function(){
+	 setInterval(times,1000);
+	 times(); 
+		 }
+
+</script>
+</head>
+
+<body>
+<div id="time" style="margin:0 auto; width:500px; height:500px; text-align:center; background-color:#000; color:#FFF; font-size:24px; line-height:500px;">20:15:15</div>
+</body>
+</html>

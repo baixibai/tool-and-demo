@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#sel{ width:200px;}
+</style>
+<script>
+//  获取当前select选中的值，然后和其他select的子项比较，如果找到和他相等的值，就删除这个节点
+window.onload=function(){
+  var sel=document.getElementById('sel');
+  var ss=document.getElementsByTagName("select")[0]; 
+  var ss1=document.getElementsByTagName("select")[1];
+  var ss2=document.getElementsByTagName("select")[2];
+  var opt=ss.getElementsByTagName('option');
+  var opt1=ss1.getElementsByTagName('option');
+  var opt2=ss2.getElementsByTagName('option');
+  //alert(ss[0].options[ss.selectedIndex].value);
+
+		ss.onchange=function(){
+	  
+			//if(ss.options[ss.selectedIndex])
+			//{ 
+					  //ss.options[ss.selectedIndex].style.display='none';
+					  //ss.childNodes[1].style.background='red';
+					  //ss1.removeChild(ss1.childNodes[2]);
+					  
+
+					 
+					  //alert(ss1.options[ss1.selectedIndex].value==qw);
+
+					  for(var i=0;i<ss.options.length;i++)
+					  {     
+					  //alert(ss.options[ss.selectedIndex].value);
+							if(ss1.options[i].value==ss.options[ss.selectedIndex].value){
+							//var	n=ss.options[ss.selectedIndex].index;
+							
+							//ss1.remove(ss1.options[n]);
+							//ss1.removeChild(ss1.childNodes[n]);
+							ss1.options.remove(i);
+							}
+					  }
+					  ss2.removeChild(ss2.childNodes[2]);
+			//}
+			
+			
+ /*var sel=document.getElementsByTagName('sel');
+
+  //alert(ss[0].options[ss.selectedIndex].value);
+   for(var j=0;j<sel.length;j++){
+	   
+  var ss=document.getElementsByTagName("select")[j]; 
+  var opt=ss.getElementsByTagName('option');
+		ss.onchange=function(){
+	  
+			if(ss.options[ss.selectedIndex])
+			{ 
+					  //ss.options[ss.selectedIndex].style.display='none';
+					  //ss.childNodes[1].style.background='red';
+					  //ss1.removeChild(ss1.childNodes[2]);
+					  
+					  var qw=ss.options[ss.selectedIndex].value;
+					 
+					  //alert(ss1.options[ss1.selectedIndex].value==qw);
+					  for(var i=0;i<ss.getElementsByTagName('option').length;i++)
+					  {     
+					  //alert(ss1.options[i].value==qw);
+							if(ss1.options[i].value==qw){
+								n=ss.options[ss.selectedIndex].index;
+								//alert(n);
+							//ss1.remove(ss1.options[3]);
+							ss1.removeChild(ss1.childNodes[n])
+							}
+			          } 
+		}
+
+      } 
+  }*/
+   }
+
+}
+</script>
+</head>
+
+<body>
+<select id="sel">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+<select id="sel">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+<select id="sel">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+</body>
+</html>

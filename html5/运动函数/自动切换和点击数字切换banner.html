@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+*{margin: 0; padding: 0;list-style: none;}
+#odiv
+{
+	width: 400px;
+	height: 200px;
+	margin: 100px auto;
+	position: relative;
+	border: 1px black solid;
+	overflow: hidden;
+}	
+#odiv ol
+{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 2;
+}
+#odiv ol li
+{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 3px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px black solid;
+	background-color: white;
+	cursor: pointer;
+}
+#odiv ol .active
+{
+	background-color: yellow;
+}
+#odiv ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 400px;
+}
+#odiv ul li
+{
+	width: 400px;
+	height: 200px;
+	float: left;
+}
+#odiv ul li img
+{
+	width: 400px;
+	height: 200px;
+}
+</style>
+<script type="text/javascript" src="move2.js"></script>
+<script>
+	window.onload=function()
+	{
+		var odiv=document.getElementById('odiv');
+		var obtn=odiv.getElementsByTagName('ol')[0].getElementsByTagName('li');
+		var oul=odiv.getElementsByTagName('ul')[0];
+        
+        var now=0;
+		for (var i = 0; i < obtn.length; i++) 
+		{
+			obtn[i].index=i;
+			obtn[i].onclick=function()
+			{
+				now=this.index;
+                tab();
+			}
+		}
+	function tab()
+	{
+				for (var i = 0; i < obtn.length; i++) 
+				{
+					obtn[i].className='';
+				}
+				obtn[now].className='active';
+                attrChange(oul,{top:-200*now});
+	}
+	function next()
+	{
+		now++;
+		if(now==obtn.length)
+		{
+			now=0;
+		}
+		tab();
+	}
+	var timer=setInterval(next,2000);
+	odiv.onmouseover=function(){
+		clearInterval(timer);
+	}
+	odiv.onmouseout=function(){
+		timer=setInterval(next,2000);
+	}
+	}
+</script>
+</head>
+<body>
+
+<div id="odiv">
+	<ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+	</ol>
+	<ul>
+    	<li><img src="zy_bh.jpg"></li>
+    	<li><img src="zy_ql.jpg"></li>
+    	<li><img src="zy_zq.jpg"></li>
+    	<li><img src="zy_xw.jpg"></li>
+	</ul>
+</div>
+</body>
+</html>

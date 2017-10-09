@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jQuery.1.8.2.min.js"></script>
+<style>
+.scroll_div{width:1000px; height:370px; margin:0 auto; padding:10px;}
+.scroll_div .pic{width:820px; height:370px; overflow:hidden; position:relative; float:left;}
+.scroll_div .pic li{width:820px; height:370px; position:absolute; top:0; left:0; display:none;}
+.scroll_div .btn{float:right; width:173px;}
+.scroll_div .btn li{width:173px; height:66px; display:block; float:left; text-align:center; color:#fff; font:18px/100% "微软雅黑"; font-weight:bold; background:#008dd8; margin-bottom:10px; line-height:66px; cursor:pointer;}
+.scroll_div .btn li.on{background:#d73737;}
+
+li {list-style:none;}
+
+
+</style>
+<script>
+$(function(){
+var listLen = $(".pic li").length, i=0,setInter,speen = 3000;
+/*图片轮播*/
+$(".btn li:last").css({"margin":"0px 0px 0px 0px"});
+$(".btn li:first").addClass("on");
+$(".pic li:first").show();
+
+$(".btn li").each(function(index,element){
+$(element).click(function(){
+i = index;
+$(this).addClass("on").siblings().removeClass("on");
+$(".pic li").eq(index).animate({opacity:"show"},300).siblings().animate({opacity:"hide"},300);
+})
+$(element).hover(function(){
+clearInterval(setInter);
+},function(){
+outPlay();
+});
+})
+
+
+out_fun = function(){
+if(i < listLen){i++;}else{i=0;};
+$(".btn li").eq(i).addClass("on").siblings().removeClass("on");
+$(".pic li").eq(i).animate({opacity:"show"},300).siblings().animate({opacity:"hide"},300);
+}
+
+outPlay = function(){
+setInter = setInterval("out_fun()",speen);
+}
+outPlay();
+})
+
+</script>
+</head>
+
+<body>
+<div class="scroll_div">
+<ul class="pic">
+<li><img src="sj_01.jpg" /></li>
+<li><img src="sj_01.jpg" /></li>
+<li><img src="sj_01.jpg" /></li>
+<li><img src="sj_01.jpg" /></li>
+<li><img src="sj_01.jpg" /></li>
+</ul>
+<ul class="btn">
+<li>项目一</li>
+<li>项目二</li>
+<li>项目三</li>
+<li>项目四</li>
+<li>项目五</li>
+</ul>
+</div>
+
+</body>
+</html>

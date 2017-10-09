@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<style>
+select{height:1000px;width:100px}
+select option{margin-top:10px;margin-left:10px}
+</style>
+<script>
+window.onload=function(){
+var s1=document.getElementById("s1");
+var s2=document.getElementById("s2");
+s1.onclick=function(){
+var index=s1.selectedIndex; 
+var arr=new Array();     
+for (var i = 0; i <s2.options.length; i++)
+{
+if(s1.options[index].text==s2.options[i].text)
+{
+arr.push(i);
+}
+}
+for(var i=arr.length-1;i>=0;i--) 
+{
+s2.options.remove(arr[i]);
+}
+}
+}
+</script>
+</head>
+<body>
+<select id="s1" multiple="multiple">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<select id="s2" multiple="multiple">
+<option>2</option>
+<option>3</option>
+<option>2</option>
+<option>4</option>
+<option>5</option>
+<option>2</option>
+<option>3</option>
+<option>2</option>
+<option>4</option>
+<option>5</option>
+<option>2</option>
+<option>3</option>
+<option>2</option>
+<option>4</option>
+<option>5</option>
+<option>2</option>
+<option>3</option>
+<option>2</option>
+<option>4</option>
+<option>5</option>
+<option>2</option>
+<option>3</option>
+<option>2</option>
+<option>4</option>
+<option>5</option>
+<option>2</option>
+<option>3</option>
+<option>2</option>
+<option>4</option>
+<option>5</option>
+</select>
+</body>
+</html>

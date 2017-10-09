@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var oul=document.getElementById('ul1');
+	var oli=oul.getElementsByTagName('li');
+	var oA=oul.getElementsByTagName('a');
+	for(var i=0;i<oul.childNodes.length;i++){
+		//文本节点oul.childNodes[i].nodeType==3
+		//元素节点oul.childNodes[i].nodeType==1
+		if(oul.childNodes[i].nodeType==1)
+		oul.childNodes[i].style.background='red';
+		}
+	//改变第一个子节点背景	
+	//ie8以下 oul.firstChild.style.background='black';
+	if(oul.firstElementChild){
+		oul.firstElementChild.style.background='black';
+		oul.lastElementChild.style.background='black';
+		oul.nextElementSibling.style.background='blue';//下一个节点
+		oul.previousElementSibling.style.background='green';//上下一个节点
+		}
+	else{
+		oul.firstChild.style.background='black';
+		oul.lastChild.style.background='black';
+		oul.nextSibling.style.background='blue';
+		oul.previousSibling.style.background='green';
+		}	
+	//隐藏父节点	
+	for(var i=0;i<oA.length;i++){
+	oA[i].onclick=function(){
+		this.parentNode.style.display='none';
+		}
+	}
+	//获取子节点位置
+	var odiv1=document.getElementById('div1');
+	var odiv2=document.getElementById('div2');
+	alert(odiv2.offsetParent.style.width);
+	//设置元素属性
+	var txt1=document.getElementById('txt1');
+	var txt2=document.getElementById('txt2');
+	txt2.onclick=function(){
+		//txt1.value='asfsf';
+		//txt1['value']='asfas';
+		txt1.setAttribute('value','asfasf');
+		//txt1.removeAttribute('value');
+		}
+	for(var i=0;i<oli.length;i++){
+		if(oli[i].className=='box'){
+			oli[i].style.background='yellow';
+			}
+		}
+		//添加节点	
+	var txt=document.getElementById('txt');
+	var tj=document.getElementById('tj');
+	tj.onclick=function(){
+		var cre_jd=document.createElement('li');
+		cre_jd.innerHTML=txt.value;
+	    //添加在下面oul.appendChild(cre_jd);
+		if(oli.length>0){	
+		    oul.insertBefore(cre_jd,oli[0]);
+		    }
+		else{
+			oul.appendChild(cre_jd);
+			}	
+		}
+	var ul2=document.getElementById('ul2');
+	var li2=ul2.getElementsByTagName('li');
+	for(var id=0;i<li2.length;i++)
+	    {
+		   li
+		}	
+	}
+
+</script>
+</head>
+
+<body>
+<div  style=" width:200px; height:200px; background-color:#999; position:relative;">
+
+</div>
+     <input id="txt" type="text" />
+    <a id="tj" href="javascript:" style=" color:#FFF;">添加节点</a>
+<ul id="ul1">
+   <li>123<a href="javascript:">隐藏父节点</a></li>
+   <li>123<a href="javascript:">隐藏	父节点</a></li>
+   <li class="box">1231<a href="javascript:">隐藏父节点</a></li>
+   <li>1231<a href="javascript:">隐藏父节点</a></li>
+   <li>1231<a href="javascript:">隐藏父节点</a></li>
+   <li class="box">1231<a href="javascript:">隐藏父节点</a></li>
+   <li>1231<a href="javascript:">隐藏父节点</a></li>
+   <li>1231<a href="javascript:">隐藏父节点</a></li>
+</ul>
+<div id="div1" style=" width:200px; height:200px; background-color:#999; position:relative;">
+   <div id="div2" style="float:left; width:100px; height:100px; background-color:red; position:absolute;left:50px; top:50px;"></div>
+</div>
+<input id="txt1" type="text" value="123" />
+<input id="txt2" type="button" value="按钮" />
+<ul id="ul2">
+<li><a href="javascritp:">删除</a></li>
+<li><a href="javascritp:">删除</a></li>
+<li><a href="javascritp:">删除</a></li>
+<li><a href="javascritp:">删除</a></li>
+</ul>
+</body>
+</html>

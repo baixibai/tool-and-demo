@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#sel{ width:200px;}
+</style>
+<script>
+//  获取当前select选中的值，然后和其他select的子项比较，如果找到和他相等的值，就删除这个节点
+/*window.onload=function(){
+
+  var idsel=document.getElementsByTagName('select');
+  for(var n=0;n<idsel.length;n++){
+		idsel[n].onchange=function()
+		{
+					  for(var i=0;i<idsel[0].options.length;i++)
+					  {     
+					  
+							if(idsel[i].options[i].value==idsel[0].options[idsel[0].selectedIndex].value){
+								for(var j=1;j<idsel.length;j++)
+								{
+								  //idsel[j].options.remove(i);
+								  idsel[j].options[i].disabled="disabled";
+								}
+							}
+							
+					  }				
+								  var cre_jd=document.createElement('option');
+								  cre_jd.innerHTML="小米";
+								  idsel[1].appendChild(cre_jd);
+				  
+       }
+	
+  }*/
+       //点击选择时改变与当前select的值相同的其他select中此项的属性
+       function change_select(n){
+       var idsel=document.getElementsByTagName('select');
+
+            idsel[n].onchange=function()
+            {            
+            			  for(var i=0;i<idsel[n].options.length;i++)
+            			  {     
+            			  	    //查询其他select中和当前选择的select的value相同的项
+            					if(idsel[i].options[i].value==idsel[n].options[idsel[n].selectedIndex].value){
+            						for(var j=0;j<idsel.length;j++)
+            						{
+            						  //idsel[j].options.remove(i);
+            						  idsel[j].options[i].disabled="disabled";
+            						  idsel[j].options[i].style.color="red";
+            						  
+            						}
+            						idsel[n].options[idsel[n].selectedIndex].style.color="#95A5A6";
+            						idsel[n].options[idsel[n].selectedIndex].disabled="";            
+
+            					}
+            			  }		            
+	  
+            }
+    }
+    window.onload=function(){
+    var idsel=document.getElementsByTagName('select');
+    var idspan=document.getElementById('idspan');
+        
+        for(var n=0;n<idsel.length;n++){
+          idsel[n].index=n;
+        
+        idspan[0].next().after('<span style="width:100px;height: 20px;border: 1px red solid; display: block;">'+idsel[n].index+'</span>');
+            
+            change_select(idsel[n].index);
+        }
+    }
+
+</script>
+</head>
+
+<body>
+<select id="sel" multiple="multiple">
+ <option value="q1" >小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+
+<select id="sel" multiple="multiple">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+<select id="sel" multiple="multiple">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+<select id="sel" multiple="multiple">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+<select id="sel" multiple="multiple">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+<select id="sel" multiple="multiple">
+ <option value="q1">小米</option>
+ <option value="q2">华为</option>
+ <option value="q3">三星</option>
+ <option value="q4">联想</option>
+</select>
+</body>
+</html>

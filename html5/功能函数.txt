@@ -1,0 +1,1 @@
+var UA=navigator.userAgent;if(UA.match(/Android/i)||(UA.indexOf('iPhone')!=-1)||(UA.indexOf('iPod')!=-1)){window.location='http://m.mi.com/#/channel?id=27';}   判断是否是手机

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="Generator" content="EditPlus®">
+ <meta name="Author" content="">
+ <meta name="Keywords" content="">
+ <meta name="Description" content="">
+ <title></title>
+<script type="text/javascript" src="/statics/fss/js/jQuery.1.8.2.min.js"></script>
+ <script>
+ $(function(){
+   //鼠标滑过pages，左右按钮进行显示和隐藏
+   $(".pages").hover(function(){
+     $(".lr").show();
+   },function(){
+     $(".lr").hide();
+   });
+   //点击下面的小按钮，图片进行左右切换效果
+   $(".anniu li").click(function(){
+     $(this).addClass("on").siblings().removeClass("on");
+     var num=$(this).index();
+     $(".pic").animate({marginLeft:-350*num},"slow");
+   });
+   //图片自动轮播效果
+   var a=0;
+   var automatic=setInterval(function(){
+     a++;
+     a=a%5;
+     $(".pic").animate({marginLeft:-350*a},"slow");
+     $(".anniu li").eq(a).addClass("on").siblings().removeClass("on");
+   },6000);
+   //点击左右按钮，图片进行切换效果
+   $(".pre").click(function(){
+     a--;
+     a=(a+5)%5;
+     $(".pic").animate({marginLeft:-350*a},"slow");
+     $(".anniu li").eq(a).addClass("on").siblings().removeClass("on");
+   });
+   $(".next").click(function(){
+     a++;
+     a=a%5;
+     $(".pic").animate({marginLeft:-350*a},"slow");
+     $(".anniu li").eq(a).addClass("on").siblings().removeClass("on");
+   });
+});
+
+ </script>
+ <style>
+*{margin:0px;padding:0px}
+li{list-style:none}
+a{text-decoration:none}
+img{border:0px}
+.pages{width:350px;height:495px;margin:100px auto;position:relative;overflow:hidden}
+.pages .pic{width:9999px;height:495px}
+.pages .pic li{width:350px;height:495px;float:left}
+.pages .anniu{width:100px;height:16px;position:absolute;left:165px;top:470px}
+.pages .anniu li{width:16px;height:16px;background:white;float:left;margin:2px;display:inline;
+cursor:pointer;border-radius:100%}
+.pages .anniu li.on{background:red}
+.pages .lr{width:350px;height:50px;position:absolute;top:250px;display:none}
+.pages .lr a{color:white}
+.pages .lr .pre{width:20px;height:50px;float:left;background:none repeat scroll 0px 0px rgba(1, 0, 0, 0.6);text-align:center;line-height:50px;cursor:pointer}
+.pages .lr .next{width:20px;height:50px;float:right;background:none repeat scroll 0px 0px rgba(1, 0, 0, 0.6);text-align:center;line-height:50px;cursor:pointer}
+
+ </style>
+ </head>
+ <body>
+   <div class="pages">
+     <ul class="pic">
+								<li class="item" style="left:0px;">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_01.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;">111</a></h3>
+								</li>
+								<li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_02.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_03.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_04.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_05.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_06.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_07.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_08.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_09.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_10.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_11.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_12.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_13.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_14.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+                                <li class="item">
+									<a href="#" target="_blank"><img src="/statics/fss/images/sj_15.jpg" ></a>
+									<h3><a href="#" target="_blank" style="color:#FFF;text-decoration:none;"></a></h3>
+								</li>
+     </ul>
+     <ul class="anniu">
+       <li class="on"></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+     </ul>
+     <ul class="lr">
+       <li class="pre"><a href="#"> < </a></li>
+       <li class="next"><a href="#"> > </a></li>
+     </ul>
+   </div>
+ </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" charset="UTF-8" />
+<title>js运动框架总汇</title>
+<style type="text/css">
+*{margin: 0;padding: 0;list-style: none;}
+#jdt{width: 10px; height: 50px; border: 1px black solid;background-color: red;margin-top: 20px; margin-left: 20px;float: left;}
+#txt{ float: left; width: 30px; height: 50px; }
+</style>
+<script type="text/javascript" src="move2.js"></script>
+<script>
+function bfb(attr)
+{
+	var odiv=document.getElementById('jdt');
+	var otxt=document.getElementById('txt');
+	
+	attrChange(odiv,{width:attr},function(){
+		var owidth=parseInt(getAttr_value(odiv,"width"));  //getAttr_value获取非行间元素的属性值，，然后整型
+		otxt.innerHTML=parseInt((owidth/1000)*100)+"%";
+	});
+}
+
+</script>
+</head>
+<body>
+<div id="jdt"></div>
+<div id="txt"></div>
+<div style="width: 1920px; height: 30px;float: left; margin-left: 20px; margin-top: 20px;">
+<a href="JavaScript:bfb(500);">第一步</a>
+<a href="JavaScript:bfb(1000);">第二步</a>
+</div>
+</body>
+</html>

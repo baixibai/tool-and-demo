@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="apple-touch-icon-precomposed" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<title></title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.img-content{
+	position: relative;
+    padding: 20px 15px 15px;
+    background-color: #fff;
+	fontSize: 16px;
+    word-wrap: break-word;
+}
+.img-content .rich_media_title{
+	margin-bottom: 10px;
+    lineHeight: 1.4;
+    font-weight: 400;
+    fontSize: 24px;
+    margin-top: 0px;
+}
+.img-content h2 {
+    display: block;
+    fontSize: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+.meta_content{
+	margin-bottom: 18px;
+    lineHeight: 20px;
+    fontSize: 0;
+	word-wrap: break-word;
+}
+.post-date{
+	font-style: 'normal',
+	display: inline-block;
+    verticalAlign: middle;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    fontSize: 16px;
+	color: #8c8c8c;
+	lineHeight: 20px;
+	word-wrap: break-word;
+}
+.rich_media_content {
+    overflow: hidden;
+    color: #3e3e3e;
+	fontSize: 16px;
+    word-wrap: break-word;
+}
+.rich_media_content .fromname{
+	margin-bottom: 0px; paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px', lineHeight: 1.75em; margin-top: 10px;
+}
+.rich_media_content .fromname strong{
+	color: 'rgb(158, 34, 127)', letterSpacing: '0.5px', whiteSpace: 'normal',
+}
+.rich_media_content .fromname strong span{
+	fontFamily: 'DengXian', fontSize: '14px',
+}
+.rich_media_content .pcommon{
+	margin-bottom: 0px; paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px', lineHeight: 1.75em; margin-top: 10px;
+}
+.rich_media_content .spancommon{
+	fontFamily: 'DengXian', fontSize: '14px',
+}
+.rich_media_content .dotted{
+	whiteSpace: 'normal', fontSize: '14px', margin-top: 2px; margin-bottom: 2px; border-width: 1px; border-style: dotted; borderColor: rgb(250, 140, 0); padding: 2px;
+	max-width: 100%!important;
+    box-sizing: border-box!important;
+    -webkit-box-sizing: border-box!important;
+    word-wrap: break-word!important;
+	paddingLeft: '0.5em',
+    paddingRight: '0.5em',
+	max-width: 100%!important;
+    box-sizing: border-box!important;
+    -webkit-box-sizing: border-box!important;
+    word-wrap: break-word!important;
+	color: rgb(121,121,121);
+    padding: 10px;
+	margin:20px 0px;
+}
+.rich_media_content .dotted .spancolor{
+	color: 'rgb(158, 34, 127)',
+    letterSpacing: '0.5px',
+    whiteSpace: 'normal',
+	fontFamily: 'DengXian', fontSize: '14px',
+	font-weight: bold;
+}
+.rich_media_content .gifttralm{
+	textAlign: 'center', paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px',
+}
+.rich_media_content .gifthand{
+	margin-top:15px;
+}
+.rich_media_content .getimga{
+	max-width: 100%!important;
+    box-sizing: border-box!important;
+    -webkit-box-sizing: border-box!important;
+    word-wrap: break-word!important;
+	    color: #607fa6;
+    text-decoration: none;
+}
+.rich_media_content .getimga img{
+	width:100%;
+}
+.rich_media_content .content_p{
+	paddingRight: 0em; paddingLeft: 0em; whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: justify; lineHeight: 1.75em;
+}
+.rich_media_content .redblock{
+			margin-top: 10px; paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px',
+		}
+.rich_media_content .redblock .spantitle{
+	fontSize: '14px', fontFamily: 'DengXian', color: 'rgb(158, 34, 127)',
+}
+.rich_media_content .redblock .span{
+	fontSize: '14px', fontFamily: 'DengXian',
+}
+.richtable{
+	margin-bottom: 10px;
+	border-collapse: collapse;
+	display: table;
+	width: 100%!important;
+	border-spacing: 2px;
+	borderColor: grey;
+}
+.richtable tr {
+	display: table-row;
+	verticalAlign: inherit;
+	borderColor: inherit;
+}
+.richtable td, .richtable th {
+	display: table-cell;
+	verticalAlign: inherit;
+		border: 1px solid #DDD;
+}
+.richtable p{
+	clear: both;
+	min-height: 1em;
+}
+.richtable .td1{
+	padding: 0px 7px; border-top: none; border-right-color: windowtext; border-bottom-color: windowtext; border-left-color: windowtext;
+}
+.richtable .td2{
+	padding: 0px 7px; border-top-color: windowtext; border-right-color: windowtext; border-bottom-color: windowtext; border-left: none;
+}
+.richtable .td3{
+	padding: 0px 7px; border-top: none; border-right-color: windowtext; border-bottom-color: windowtext; border-left: none;
+}
+.richtable span{
+	fontFamily: 宋体; fontSize: '14px',
+}
+</style>
+</head>
+<body>
+<div className="img-content">
+	<h2 className="rich_media_title">
+		送送送 | 这一次，你与美的距离只有0元！
+	</h2>
+	<div className="meta_content">
+		<em className="post-date">
+		</em>
+		<em className="post-date">
+			李秋涛
+		</em>
+		<span className="post-date">
+			秋涛美肤
+		</span>
+	</div>
+	<div className="rich_media_content ">
+		<p className="fromname">
+			<strong>
+				<span>
+					来自好友的分享：XXXXXXXX
+				</span>
+			</strong>
+		</p>
+		<p className="pcommon">
+			<span className="spancommon">
+				亲爱的朋友，当您看到这个页面，说明您已经有权利享受秋涛美肤送出的免费超值大礼。
+			</span>
+		</p>
+		<p className="dotted">
+			<span className="spancolor">
+				A礼券、B礼券，任选其一，本文转发有效。
+			</span>
+		</p>
+		<p className="gifttralm">
+			<span className="spancommon" style={{fontWeight:'bold'}}>
+				<span className="spancommon">
+					A
+				</span>
+				礼券
+			</span>
+		</p>
+		<p className="gifttralm">
+			<strong>
+				<span className="spancommon">
+					<span>
+						【超冰脱毛欢乐送，
+					</span>
+					0元包年不限次】
+				</span>
+			</strong>
+		</p>
+		<p className="gifttralm">
+			<span className="spancommon">
+				点击下图即可领券
+			</span>
+		</p>
+		<p style={{textAlign:' center'}}>
+			<img className="gifthand" data-src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPM3ntjvIvicWSCyCXllLY5UAiay2Hcib1dMAKQtIpiaLbvUHaJsGXiaLhicjOg/0?wx_fmt=gif" data-ratio="0.7838983050847458" data-w="236" style={{width: '10% !important', height: 'auto !important', visibility: 'visible !important'}} src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPM3ntjvIvicWSCyCXllLY5UAiay2Hcib1dMAKQtIpiaLbvUHaJsGXiaLhicjOg/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1"
+			 />
+		</p>
+		<p style={{textAlign:' center'}}>
+			<a href="http://member.skinperfect.cn/wepay/home/4006783618" className="getimga">
+				<img data-src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMLhZMCwlcrfjjHWRvEiaibS1uNBvtrViaq0HAcIZK6h5EH9jgA55vU9ic2w/0?wx_fmt=gif"
+				className="bg_gif" style={{textAlign: 'center', whiteSpace: 'normal', visibility: 'visible !important'}}
+				src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMLhZMCwlcrfjjHWRvEiaibS1uNBvtrViaq0HAcIZK6h5EH9jgA55vU9ic2w/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" />
+			</a>
+		</p>
+		<p className="gifttralm" style={{marginTop:'35px'}}>
+			<span style={{color: 'rgb(0, 0, 0)'}}>
+				<strong>
+					<span className="spancommon">
+						<span className="spancommon">
+							B
+						</span>
+						礼券
+					</span>
+				</strong>
+			</span>
+		</p>
+		<p className="gifttralm">
+			<strong>
+				<span className="spancommon">
+					<span>
+						【秋涛医学祛痘0元享，皮肤医生个性诊治（1次）
+					</span>
+					】
+				</span>
+			</strong>
+		</p>
+		<p className="gifttralm">
+			<span className="spancommon">
+				点击下图即可领券
+			</span>
+		</p>
+		<p style={{textAlign:' center'}}>
+			<img className="gifthand" data-src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPM3ntjvIvicWSCyCXllLY5UAiay2Hcib1dMAKQtIpiaLbvUHaJsGXiaLhicjOg/0?wx_fmt=gif" style={{textAlign: 'center', whiteSpace: 'normal', width: '55.5625px !important',height: '43.5553px !important'}} src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPM3ntjvIvicWSCyCXllLY5UAiay2Hcib1dMAKQtIpiaLbvUHaJsGXiaLhicjOg/0?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1"
+			 />
+		</p>
+		<p style={{textAlign:' center',marginTop:'15px'}}>
+			<a href="http://member.skinperfect.cn/wepay/home/4006783618" className="getimga">
+				<img data-src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMxic3ZBEvM1HAFgkCrLbdQhf63Cbgj9W3Cmoy6AhrE2ialANIYgCkjhpw/0?wx_fmt=gif"
+				className="bg_gif"  style={{textAlign: 'center', whiteSpace: 'normal', visibility: 'visible !important'}}
+				src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMxic3ZBEvM1HAFgkCrLbdQhf63Cbgj9W3Cmoy6AhrE2ialANIYgCkjhpw/0?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" />
+			</a>
+		</p>
+		<p style={{textAlign: 'center', whiteSpace: 'normal', lineHeight: '2em',paddingRight: '0.5em', marginTop: '20px'}}>
+			<iframe className="video_iframe" frameborder="0"  data-src="https://v.qq.com/iframe/player.html?vid=t0344urw2f1&amp;width=367&amp;height=206.4375&amp;auto=0"
+			width="367" height="206.4375" data-vw="367" style={{display: 'block', width: '367px !important', height: '206.438px !important', overflow: 'hidden'}}
+			src="https://v.qq.com/iframe/player.html?vid=t0344urw2f1&amp;width=367&amp;height=206.4375&amp;auto=0"
+			scrolling="no">
+			</iframe>
+		</p>
+		<div className="dotted" style={{marginTop: '40px'}}>
+			<p className="content_p">
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					免费，还拿天王级的医疗脱毛设备包年？！
+				</span>
+			</p>
+			<p className="content_p">
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					免费，还能让皮肤科医生个性化诊治？！
+				</span>
+			</p>
+			<p className="content_p">
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					天下，真有免费的午餐？！
+				</span>
+			</p>
+			<p className="content_p">
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					为什么免费？秋涛美肤如是说——
+				</span>
+			</p>
+			<p className="content_p" style={{margin: '20px 0px'}}>
+				<span style={{fontSize: '16px', color: 'rgb(158, 34, 127)'}}>
+					<strong>
+						<span style={{fontFamily: '宋体'}}>
+							一、“这将是我们相遇相识的一次契机。”
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p className="content_p">
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					九年来，秋涛美肤立足于非手术、非整形，凭借扎实的专业技术、明码实价和“己所不欲勿施于人”的服务理念，在没有任何广告的情况下，赢得了大家的信任和口碑。
+				</span>
+			</p>
+			<p className="content_p">
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					每一位求美者，不仅仅是参与者、受益者，也是我们的见证者，更是我们的贵人，一直信任与陪伴着我们发展前行！独美美不如众美美，秋涛美肤应该把美丽分享给更多的人。若您恰好需要，我们恰好专业，这将是我们相遇的美好契机。
+				</span>
+			</p>
+			<p className="content_p" style={{margin: '20px 0px'}}>
+				<span style={{fontSize: '16px', color: 'rgb(158, 34, 127)'}}>
+					<strong>
+						<span style={{fontFamily: 'DengXian'}}>
+							二、“
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: '宋体'}}>
+							我们期待，此次契机仅仅是个起点，共创属于我们未来更为长远的缘分。
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: 'DengXian'}}>
+							”
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p className="content_p">
+				<strong>
+					<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+						我们从不计较一时一刻的得失，秋涛医学美肤只专注为客户提供“终身价值”
+					</span>
+					<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+						。
+					</span>
+				</strong>
+			</p>
+			<p style={{marginTop: '10px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					美丽路上，我们总会遇到岁月的侵袭，如斑点、皱纹、松弛等问题，皮肤衰老的规律决定了皮肤美容是一个长期持续的维护过程。是的，美丽不是短暂的邂逅，而是长情的陪伴，
+					<span style={{letterSpacing: '0.5px', textAlign: 'justify',color: 'rgb(121, 121, 121)',fontFamily: 'DengXian', fontSize: '14px'}}>
+						这也决定了我们这个细分的领域，
+					</span> 
+					立足于客人的终身价值，做持续性的口碑才是我们的生存之道。
+				</span>
+			</p>
+			<p style={{marginTop: '10px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					九年来，我们一直坚持做免费体验活动。我们相信，只要您体验过我们高品质服务，认可秋涛美肤的专业，现在或未来您有了美肤需求，秋涛美肤将可能成为您的选择之一。
+				</span>
+			</p>
+			<p className="content_p">
+				<strong>
+					<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+						九年的数据印证：我们的免费体验客人，回头率始终高达90%以上。
+					</span>
+				</strong>
+			</p>
+			<p style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					凭什么？
+				</span>
+			</p>
+			<p style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					1、实力过硬。我们的免费体验，永远品质为尊，永远一视同仁。
+				</span>
+			</p>
+			<p style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					2、顾问式服务。我们把心思、精力集中在为客户解决问题，而非强制推销上。
+				</span>
+			</p>
+			<p style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					3、我们保障安全为先，技术至上，坚持“己所不欲勿施于人”的服务理念。
+				</span>
+			</p>
+			<p className="content_p" style={{margin: '20px 0px'}}>
+				<span style={{fontSize: '16px', color: 'rgb(158, 34, 127)'}}>
+					<strong>
+						<span style={{fontFamily: 'DengXian'}}>
+							三、“
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: '宋体'}}>
+							送礼就送更好的！这是秋涛美肤一次真诚的美丽分享。
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: 'DengXian'}}>
+							”
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<strong>
+					<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+						技术和服务，是我们赖以生存的法宝；客人的口碑，是决定我们能走多远的关键。
+					</span>
+				</strong>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					从一开始，我们就把营业场所，定位在了CBD高层，注定我们只能靠口碑生存。
+				</span>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					九年以来，我们坚决捍卫明码实价，不打广告，因为我们深知华山一道，只能靠口碑取胜。
+				</span>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					我们没有理由，花这么多的心思，做这么大的努力，来伤害您的体验，伤害自己的品牌。
+				</span>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<strong>
+					<span style={{fontFamily: 'DengXian'}}>
+						您来，我们就对您负责到底！
+					</span>
+				</strong>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontFamily: 'DengXian'}}>
+					您的担心可能是：被强销、白花一次车费、服务品质不好……对您而言，不过是三分钟的顾虑。
+				</span>
+			</p>
+			<p className="content_p">
+				<strong>
+					<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+						在此，我们郑重提醒：
+					</span>
+				</strong>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontFamily: 'DengXian'}}>
+					我们此次活动目的是，帮助真正有需要的朋友。
+				</span>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontFamily: 'DengXian'}}>
+					因为我们的医疗资源是有限的，每月能接待的人数也是有限的，请您不要为了免费而体验。这不仅会浪费您的时间，还会占用他人的宝贵名额。谢谢您的体谅和理解！
+				</span>
+			</p>
+			<p  style={{marginTop: '50px', paddingRight: '0em', paddingLeft: '0em', whiteSpace: 'normal', letterSpacing: '0.5px', textAlign: 'justify', lineHeight: '1.75em'}}>
+				<span style={{fontFamily: 'DengXian'}}>
+					当然，若您能将它分享给身边的闺蜜、朋友，以帮助需要帮助的人，我们会非常感激。
+				</span>
+				<br>
+			</p>
+			<p style={{paddingRight: '0.5em', paddingLeft: '0.5em', whiteSpace: 'normal', letterSpacing: '0.5px'}}>
+				<br>
+			</p>
+		</div>
+		<p style={{whiteSpace: 'normal', lineHeight: '2em', textAlign: 'center',margin:'30px 0px 20px 0px'}}>
+			<strong style={{textAlign: 'center', textIndent: '28px'}}>
+				<span style={{color: 'rgb(158, 34, 127)', fontSize: '16px', fontFamily: 'DengXian'}}>
+					关于福利
+				</span>
+			</strong>
+		</p>
+		<div className="dotted">
+			<p style={{textAlign: 'center', whiteSpace: 'normal', lineHeight: '1.75em'}}>
+				<span style={{color: 'rgb(0, 0, 0)'}}>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							<strong style={{fontSize: '14px', textAlign: 'center', whiteSpace: 'normal'}}>
+								<span style={{fontFamily: 'DengXian'}}>
+									A
+								</span>
+							</strong>
+							礼券
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p style={{textAlign: 'left', whiteSpace: 'normal', lineHeight: '1.75em'}}>
+				<span style={{color: 'rgb(0, 0, 0)'}}>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							【
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							超冰脱毛欢乐送，0元包年不限次
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							】
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p style={{textAlign: 'left', whiteSpace: 'normal', lineHeight: '1.75em'}}>
+				<span style={{fontFamily: 'DengXian', fontSize: '14px', color: 'rgb(0, 0, 0)'}}>
+					活动内容：双腋下/双前臂/双小腿/上唇四选一。
+				</span>
+			</p>
+		</div>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px'}}>
+			<strong>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					飞顿超冰脱毛，引领全球激光脱毛金标准
+				</span>
+			</strong>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+				<br>
+			</span>
+		</p>
+		<p style={{margin-top: 10px; paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px'}}>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian', color: 'rgb(158, 34, 127)'}}>
+				超干净：
+			</span>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+				价值百万，飞顿家族中的高端名品，双手具，双波长专利，能将细毛、绒毛一网打尽。
+			</span>
+		</p>
+		<p className="redblock">
+			<span className="spantitle">
+				超冰爽：
+			</span>
+			<span className="span">
+				专利SHR模式，-4摄氏度TEC冷却，开启真正舒适脱毛时代，给你前所未有的冰爽体验。
+			</span>
+		</p>
+		<p className="redblock">
+			<span className="spantitle">
+				超快速：
+			</span>
+			<span className="span">
+				它被誉为脱毛中的法拉利，20*10mm超大光斑快速滑动，2分钟实现轻松脱毛，几次就能脱干净。
+			</span>
+		</p>
+		<p className="redblock">
+			<span className="spantitle">
+				参与方式：
+			</span>
+			<span className="span">
+				点击下图，即可享受全球金标准带来的丝滑美肌。
+			</span>
+		</p>
+		<p style={{textAlign: 'center', paddingLeft: '0.5em', paddingRight: '0.5em'}}>
+			<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+				↓↓↓
+			</span>
+		</p>
+		<p style={{textAlign: 'center',marginTop:'15px'}}>
+			<a href="http://member.skinperfect.cn/wepay/home/4006783618" className="getimga">
+				<img data-src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMrOIoltN3rTeZgkiaXmZDickGlctZWhYLaL87ibNL04btx2Xia8iaibZIjwuw/0?wx_fmt=gif"
+				className="bg_gif" style={{textAlign: 'center', whiteSpace: 'normal', visibility: 'visible !important'}}
+				src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMrOIoltN3rTeZgkiaXmZDickGlctZWhYLaL87ibNL04btx2Xia8iaibZIjwuw/0?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" />
+			</a>
+		</p>
+		<div className="dotted">
+			<p style={{textAlign: 'center', whiteSpace: 'normal'}}>
+				<span style={{color: 'rgb(0, 0, 0)'}}>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							<strong style={{fontSize: '14px', textAlign: 'center', whiteSpace: 'normal'}}>
+								<span style={{fontFamily: 'DengXian'}}>
+									B
+								</span>
+							</strong>
+							礼券
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p style={{textAlign: 'left', whiteSpace: 'normal', lineHeight: '1.75em'}}>
+				<span style={{color: 'rgb(0, 0, 0)'}}>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							【
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							秋涛医学祛痘0元享，皮肤医生个性诊治（1次）
+						</span>
+					</strong>
+					<strong>
+						<span style={{fontFamily: 'DengXian', fontSize: '14px'}}>
+							】
+						</span>
+					</strong>
+				</span>
+			</p>
+			<p style={{textAlign: 'left', whiteSpace: 'normal', lineHeight: '1.75em'}}>
+				<span style={{color: 'rgb(0, 0, 0); fontFamily: 'DengXian', fontSize: '14px'}}>
+					活动内容：适合有祛痘需求的求美者，领券即可免费体验！
+				</span>
+			</p>
+		</div>
+		<p style={{letterSpacing: '0.5px', paddingLeft: '0.5em', paddingRight: '0.5em'}}>
+			<strong>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					秋涛医学祛痘，找回本该属于你的
+				</span>
+			</strong>
+			<strong>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+					美！
+				</span>
+			</strong>
+		</p>
+		<p className="redblock">
+			<span  className="spantitle">
+				私家方案，精湛手法。
+			</span>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian',lineHeight: '1.75em'}}>
+				专业皮肤科医生，采用独特思路，对痘痘分类型、分成因、分设备、分时段，量身定制私家方案，给痘痘致命一击。
+			</span>
+		</p>
+		<p className="redblock">
+			<span  className="spantitle">
+				联合技术，内调外治。
+			</span>
+			<span  className="span" style={{lineHeight: '1.75em'}}>
+				采用秋涛专配祛痘内调配方，联合多种设备仪器和技术，内外结合，双向祛痘，效果更彻底。
+			</span>
+		</p>
+		<p className="redblock">
+			<span  className="spantitle">
+				预防复发，改善肤质。
+			</span>
+			<span  className="span" style={{lineHeight: '1.75em'}}>
+				建立一站式祛痘治疗系统，通过多层次、全方位的精细治疗，预防痘痘反复，同步改善肤质。
+			</span>
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', marginTop: '10px'}}>
+			<span style={{color: 'rgb(158, 34, 127)', fontSize: '14px', fontFamily: 'DengXian'}}>
+				参与方式：
+			</span>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+				点击下图，即可享受皮肤科医生的个性化诊治。
+			</span>
+		</p>
+		<p style={{textAlign: 'center', paddingLeft: '0.5em', paddingRight: '0.5em'}}>
+			<span style={{fontFamily: 'DengXian', fontSize: '14px', textAlign: 'center'}}>
+				↓↓↓
+			</span>
+		</p>
+		<p style={{textAlign: 'center',marginTop:'15px'}}>
+			<a href="http://member.skinperfect.cn/wepay/home/4006783618" className="getimga">
+				<img data-src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMicZXO9BK9LzJEJDLg4oLfX1GkCxchMmXvPyVk6GYuMPhHo0ianR7iabnw/0?wx_fmt=gif"
+				className="bg_gif" style={{textAlign: 'center', whiteSpace: 'normal', visibility: 'visible !important'}}
+				src="http://mmbiz.qpic.cn/mmbiz_gif/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMicZXO9BK9LzJEJDLg4oLfX1GkCxchMmXvPyVk6GYuMPhHo0ianR7iabnw/0?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" />
+			</a>
+		</p>
+		<p style={{textAlign: 'center', paddingLeft: '0.5em', paddingRight: '0.5em'}}>
+			<br>
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px', marginTop: '5px', lineHeight: '1.75em'}}>
+			<strong>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian', color: 'rgb(158, 34, 127)'}}>
+					温馨提示：
+				</span>
+			</strong>
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px', marginTop: '5px', lineHeight: '1.75em'}}>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+				1.鱼与熊掌不可兼得，请您根据自身需要，领取其中一个。
+			</span>
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', letterSpacing: '0.5px', marginTop: '5px', lineHeight: '1.75em'}}>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+				2.活动真实免费，我们承诺不收取任何附加费用，品质不打折、服务不打折、美丽不打折！
+			</span>
+		</p>
+		<p style={{textAlign: 'center',marginTop:'15px'}}>
+			<a href="http://member.skinperfect.cn/wepay/home/4006783618" className="getimga">
+				<img data-src="http://mmbiz.qpic.cn/mmbiz_png/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPM0OhdjBrLYiaMGK0IvucSFeXUxUH5ELSFkQlzEugo1Oibqr2oK7X1e4Ew/0?wx_fmt=gif"
+				className="bg_gif" style={{textAlign: 'center', whiteSpace: 'normal', visibility: 'visible !important'}}
+				src="http://mmbiz.qpic.cn/mmbiz_png/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPM0OhdjBrLYiaMGK0IvucSFeXUxUH5ELSFkQlzEugo1Oibqr2oK7X1e4Ew/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" style={{width: '384px !important', height: '368.64px !important'}} />
+			</a>
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em',margin:'20px 0px'}}>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian'}}>
+				当然，我们还有更多的美肤项目，任君选择，美丽共享，不容错过。
+			</span>
+		</p>
+		<table className="richtable" width="585">
+			<tbody>
+				<tr style={{height: '30px'}}>
+					<td width="585" valign="center" colspan="5" style={{padding: '0px 7px', borderColor: 'windowtext'}}>
+						<p style={{textAlign: 'center', verticalAlign: 'middle'}}>
+							<span style={{fontSize: '15px'}}>
+								SKINPERFECT开展项目
+							</span>
+						</p>
+					</td>
+				</tr>
+				<tr style={{height: '30px'}}>
+					<td width="81" valign="center" className="td1">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								色素管理
+							</span>
+						</p>
+					</td>
+					<td width="99" valign="center" className="td2">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								花酸活肤
+							</span>
+						</p>
+					</td>
+					<td width="118" valign="center" className="td2">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								超V小脸定制
+							</span>
+						</p>
+					</td>
+					<td width="135" valign="center" className="td2">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								眶周美雕除皱
+							</span>
+						</p>
+					</td>
+					<td width="152" valign="center" className="td2">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								飞梭魅肌雪肤秀
+							</span>
+						</p>
+					</td>
+				</tr>
+				<tr style={{height: '30px'}}>
+					<td width="81" valign="center" className="td1">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								无痕祛斑
+							</span>
+						</p>
+					</td>
+					<td width="99" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								黑脸娃娃
+							</span>
+						</p>
+					</td>
+					<td width="118" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								PRP抗衰回春
+							</span>
+						</p>
+					</td>
+					<td width="135" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								R²PL嫩肤系统
+							</span>
+						</p>
+					</td>
+					<td width="152" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								真皮层注射除皱
+							</span>
+						</p>
+					</td>
+				</tr>
+				<tr style={{height: '30px'}}>
+					<td width="81" valign="center" className="td1">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								激光祛痣
+							</span>
+						</p>
+					</td>
+					<td width="99" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								肤立秀
+							</span>
+						</p>
+					</td>
+					<td width="118" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								痤疮痘印痘疤
+							</span>
+						</p>
+					</td>
+					<td width="135" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								热玛吉第四代
+							</span>
+						</p>
+					</td>
+					<td width="152" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								无创祛眼袋黑眼圈
+							</span>
+						</p>
+					</td>
+				</tr>
+				<tr style={{height: '30px'}}>
+					<td width="81" valign="center" className="td1">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								射频嫩肤
+							</span>
+						</p>
+					</td>
+					<td width="99" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								水晶娃娃
+							</span>
+						</p>
+					</td>
+					<td width="118" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								点阵像素去疤
+							</span>
+						</p>
+					</td>
+					<td width="135" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								极限音波拉皮
+							</span>
+						</p>
+					</td>
+					<td width="152" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								冰激光永久脱毛
+							</span>
+						</p>
+					</td>
+				</tr>
+				<tr style={{height: '30px'}}>
+					<td width="81" valign="center" className="td1">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								皮秒激光
+							</span>
+						</p>
+					</td>
+					<td width="99" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								种植面膜
+							</span>
+						</p>
+					</td>
+					<td width="118" valign="center" className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								妊娠纹搭桥术
+							</span>
+						</p>
+					</td>
+					<td width="135" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								敏感性肌肤防治
+							</span>
+						</p>
+					</td>
+					<td width="152" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								极限双娇全面抗衰
+							</span>
+						</p>
+					</td>
+				</tr>
+				<tr style={{height: 31px'}}>
+					<td width="81" valign="center" className="td1">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								皮肤重建
+							</span>
+						</p>
+					</td>
+					<td width="99" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								黄金艾肤拉
+							</span>
+						</p>
+					</td>
+					<td width="118" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								4D艺术线雕
+							</span>
+						</p>
+					</td>
+					<td width="135" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								秋涛速妍水光针
+							</span>
+						</p>
+					</td>
+					<td width="152" valign="center"className="td3">
+						<p style={{verticalAlign: 'middle'}}>
+							<span>
+								优立塑热力塑体雕
+							</span>
+						</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p style={{lineHeight: '1.75em', paddingLeft: '0.5em', paddingRight: '0.5em',margin: '20px 0px'}}>
+			<span style={{fontSize: '14px', fontFamily: 'DengXian', letterSpacing: '0.5px'}}>
+				您的美丽容颜，我的毕生使命。
+				<span style={{fontFamily: 'DengXian', fontSize: '14px', letterSpacing: '0.5px'}}>
+					相识即缘，相约秋涛，开启属于您的医学美肤之旅吧！
+				</span>
+			</span>
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', lineHeight: '1.75em'}}>
+			<strong>
+				<span style={{fontSize: '14px', fontFamily: 'DengXian', letterSpacing: '0.5px'}}>
+					秋涛美肤深圳总院
+				</span>
+			</strong>
+			<img data-s="300,640" data-type="png" data-src="http://mmbiz.qpic.cn/mmbiz_png/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMk9K1NchEaCKTIH42F3g0JBI2gsdj5HgIicZXCPiaoSSbTUhQcW5OGWSA/0?wx_fmt=png"
+			className="" data-ratio="0.12405609492988134" data-w="927" style={{width: '85% !important', height: 'auto !important', visibility: 'visible !important'}}
+			_width="85%" src="http://mmbiz.qpic.cn/mmbiz_png/QqgGOyKwmdx3PRZeLDia9d8oPkOdxfmPk83jtV7qrqot20oQNo3b3z1RX1vS7FdsxLJBSjjG56vMAmiaIxe3Mclw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1"
+			data-fail="0" />
+		</p>
+		<p style={{paddingLeft: '0.5em', paddingRight: '0.5em', lineHeight: '1.75em'}}>
+			<strong>
+				<span style={{fontFamily: 'DengXian', fontSize: '14px', letterSpacing: '0.5px'}}>
+					秋涛美肤郑州分院
+				</span>
+			</strong>
+			<img data-s="300,640" data-type="png" data-src="http://mmbiz.qpic.cn/mmbiz_png/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMlicvyBUeVFnpAAvPhRGp4ia3QF2zMTIc04kX7JRFCYOnsDb9uaDgNxBQ/0?wx_fmt=png"
+			className="" data-ratio="0.12405609492988134" data-w="927" style={{width: '85% !important', height: 'auto !important', visibility: 'visible !important'}}
+			_width="85%" src="http://mmbiz.qpic.cn/mmbiz_png/QqgGOyKwmdwEZrMM2hcrPAjKZTnIkxPMlicvyBUeVFnpAAvPhRGp4ia3QF2zMTIc04kX7JRFCYOnsDb9uaDgNxBQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1"
+			data-fail="0" />
+		</p>
+		<p style={{lineHeight: 1.75em; paddingLeft: '0.5em', paddingRight: '0.5em'}}>
+			<strong>
+				<span style={{fontFamily: 'DengXian', fontSize: '14px', letterSpacing: '0.5px'}}>
+				</span>
+			</strong>
+			<br>
+		</p>
+		<p style={{textAlign: 'left', lineHeight: 1.75em; paddingLeft: '0.5em', paddingRight: '0.5em'}}>
+			<span style={{fontFamily: 'DengXian', fontSize: 12px; letterSpacing: '0.5px', lineHeight: '1.75em'}}>
+				秋涛美肤对此次活动拥有最终解释权！
+			</span>
+			<br>
+		</p>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/weixinAudio.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+<!-- $('.weixinAudio').weixinAudio({ -->
+			<!-- autoplay:true, -->
+			<!-- src:'sound/sound.mp3', -->
+		<!-- }); -->
+// 修改了返回的对象,以前的无法接收
+var weixinAudioObj = $('.weixinAudio').weixinAudio({src:'sound/sound.mp3'});
+// 添加单一播放的逻辑
+$('.weixinAudio').on('click',function(event) {
+console.log(event);
+var $this = $(this);
+var currentIndex = $this.index();
+// 遍历所有对象，找到非当前点击，执行pause()方法;
+$.each(weixinAudioObj,function(i, el) {
+	if(i != 'weixinAudio'+currentIndex){
+		el.pause();
+	}
+});
+});
+
+</script>
+</html>

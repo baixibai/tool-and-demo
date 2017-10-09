@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#div1{ width:200px;}
+</style>
+<script>
+window.onload=function()
+  {
+    /*新手指南点击划开*/
+    var obtn=document.getElementById('info');
+    var oimg=obtn.getElementsByTagName('img');
+    var odiv=obtn.getElementsByTagName('div');
+    
+    for(var i=0;i<oimg.length;i++)
+    {
+      oimg[i].index=i;
+      oimg[i].onclick=function()
+      {
+         for(var i=0;i<oimg.length;i++)
+       {
+          odiv[i].className='hidden';
+       }
+        odiv[this.index].className='odiv';
+      }
+    }
+        /*end*/
+    /*职业鼠标悬停时显示介绍*/
+    var zyul=document.getElementById('four-jobs');
+    var zyli=zyul.getElementsByTagName('li');
+    var zydiv=zyul.getElementsByClassName('info_zy');
+    for(var i=0;i<zyli.length;i++)
+    {
+      zyli[i].index=i;
+      zyli[i].onmouseover=function()
+      {
+         for(var i=0;i<zyli.length;i++)
+       {
+          zydiv[i].style.display='none';
+       }
+        zydiv[this.index].style.display='block';
+      }
+      zyli[i].onmouseout=function()
+      {
+         for(var i=0;i<zyli.length;i++)
+       {
+          zydiv[i].style.display='none';
+       }
+        zydiv[this.index].style.display='none';
+      }
+    }
+    /*end*/
+  }
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+</html>

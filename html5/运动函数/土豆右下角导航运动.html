@@ -1,0 +1,108 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" charset="UTF-8" />
+	<title>运动</title>
+	<script type="text/javascript" src="move.js"></script>
+	<style type="text/css">
+#tudouyd{ width: 340px; position: absolute;bottom: 0;right: 0; }
+#but_right{ height: 60px; width: 60px;float: right;background-color: green;cursor: pointer;border: 1px black solid; }
+#but_left
+{
+	float: right;
+	height: 60px;
+	width: 0px;
+	border: 1px black solid;
+	overflow: hidden;
+
+	
+}	
+#but_left .but_left_ul
+{
+	float: left;
+}
+#but_left .but_left_ul li
+{
+	float: left;
+	width: 250px;
+	height: 30px; 
+	line-height: 30px;
+}
+#but_top
+{
+	float: right;
+	height: 0;
+	width: 322px;
+	border: 1px black solid;
+	overflow: hidden;
+	display: none;
+	position: relative;
+}	
+#but_top .but_top_ul
+{
+	float: left;
+}
+#but_top .But_close
+{
+	top: 0;
+	right: 10;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	cursor: pointer;
+}
+#but_top .but_top_ul li
+{
+	float: left;
+	width: 320px;
+	height: 30px; 
+	line-height: 30px;
+}
+</style>
+<script type="text/javascript">
+	window.onload=function()
+	{
+		var odiv=document.getElementById('tudouyd');
+		var but_right=document.getElementById('but_right');
+		var but_top=document.getElementById('but_top');
+		var But_close=but_top.getElementsByTagName('But_close');
+		var but_left=document.getElementById('but_left');
+
+		but_right.onclick=function()
+		{
+			attrChange(but_left,'width',260,function(){
+               but_top.style.display='block';  
+               attrChange(but_top,'height',200)    
+			});
+		}
+		but_top.onclick=function()
+		{
+			attrChange(but_top,'height',0,function(){
+               but_top.style.display='none';  
+               attrChange(but_left,'width',0)    
+			});
+		}
+	}
+</script>
+</head>
+<body>
+
+<div id="tudouyd">
+	<div id="but_top">
+	    <div class="But_close">x</div>
+		<ul class="but_top_ul">
+			<li>11</li>
+			<li>11</li>
+		</ul>
+	</div>
+	<div id="but_right"></div>
+	<div id="but_left">
+		<ul class="but_left_ul">
+			<li>11</li>
+			<li>11</li>
+		</ul>
+	</div>
+
+</div>
+</body>
+</html>

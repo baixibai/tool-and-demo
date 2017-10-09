@@ -1,0 +1,22 @@
+<html>
+<head>
+	<style type="text/css">
+    #div1{width: 100px;height: 100px;border: 1px black solid;background-color: red;}
+	</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var timer=null;
+		var odiv=document.getElementById("div1");
+		clearInterval(timer);
+	   timer=setInterval(function(){
+
+	   var speed=100;
+	   odiv.style.width=1+odiv.offsetWidth+"px";
+	   },30);
+	}
+</script>	
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

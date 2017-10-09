@@ -1,0 +1,54 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+#div1{width: 40px;height: 40px;position: absolute; background-color: red;}
+	</style>
+
+<script type="text/javascript">
+function getPos(ev)
+{
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+	return {x:ev.clientX+scrollLeft,y:ev.clientY+scrollTop};
+}
+
+	document.onkeydown=function(ev){
+
+	var oevent=ev||event
+	var odiv=document.getElementById('div1');
+        if(oevent.keyCode==39)
+        {
+           odiv.style.left=odiv.offsetLeft+10+'px';
+        }
+        else if(oevent.keyCode==37)
+        {
+           odiv.style.left=odiv.offsetLeft-10+'px';
+           if(odiv.offsetLeft<0)
+        {
+                 return odiv.style.left="0px";
+        }
+        }
+        else if(oevent.keyCode==38)
+        {
+        
+           odiv.style.top=odiv.offsetTop-10+'px';
+           if(odiv.offsetTop<0)
+        {
+                 return odiv.style.top="0px";
+        }
+        }
+        else if(oevent.keyCode==40)
+        {
+           odiv.style.top=odiv.offsetTop+10+'px';
+        } 
+        
+        
+	}
+</script>
+</head>
+<body>
+<div id="div1"><img src="zy_bh.jpg" width="40" height="40"></div>
+</body>
+</html>
